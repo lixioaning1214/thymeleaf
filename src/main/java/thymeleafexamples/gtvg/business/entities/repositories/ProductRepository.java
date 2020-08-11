@@ -27,27 +27,17 @@ import java.util.Map;
 
 import thymeleafexamples.gtvg.business.entities.Comment;
 import thymeleafexamples.gtvg.business.entities.Product;
-
-
 public class ProductRepository {
 
     private static final ProductRepository INSTANCE = new ProductRepository();
     private final Map<Integer,Product> productsById;
-    
-    
-    
     public static ProductRepository getInstance() {
         return INSTANCE;
     }
     
-    
     private ProductRepository() {
-        
         super();
-        
         this.productsById = new LinkedHashMap<Integer, Product>();
-
-
         final Product prod1 = new Product(1, "Fresh Sweet Basil", true, new BigDecimal("4.99"));
         final Product prod2 = new Product(2, "Italian Tomato", false, new BigDecimal("1.25"));
         final Product prod3 = new Product(3, "Yellow Bell Pepper", true, new BigDecimal("2.50"));

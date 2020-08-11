@@ -38,20 +38,12 @@ public class OrderRepository {
     private static final OrderRepository INSTANCE = new OrderRepository();
     private final Map<Integer,Order> ordersById;
     private final Map<Integer,List<Order>> ordersByCustomerId;
-    
-    
-
-    
     public static OrderRepository getInstance() {
         return INSTANCE;
     }
-    
-    
-    
+
     private OrderRepository() {
-        
         super();
-        
         this.ordersById = new LinkedHashMap<Integer, Order>();
         this.ordersByCustomerId = new LinkedHashMap<Integer, List<Order>>();
         
